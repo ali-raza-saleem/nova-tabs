@@ -37,6 +37,8 @@ class Tab implements TabContract, JsonSerializable, Arrayable
 
     protected $position;
 
+    public $uuid;
+
     public function __construct($title, array $fields, $position = 0)
     {
         $this->title = $title;
@@ -179,5 +181,11 @@ class Tab implements TabContract, JsonSerializable, Arrayable
     public function getBodyClass(): array
     {
         return $this->bodyClass;
+    }
+
+    public function uuid($uuid)
+    {
+        $this->uuid = $uuid;
+        return $this;
     }
 }

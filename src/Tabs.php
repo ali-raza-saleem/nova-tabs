@@ -44,6 +44,8 @@ class Tabs extends Panel
     public $currentColor = null;
     public string $errorColor = 'red';
 
+    public $uuid;
+
     /**
      * Create a new panel instance.
      *
@@ -285,5 +287,11 @@ class Tabs extends Panel
         ]);
 
         return $result;
+    }
+
+    public function uuid($uuid)
+    {
+        $this->uuid = $uuid;
+        return $this;
     }
 }
