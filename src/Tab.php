@@ -18,7 +18,10 @@ use function is_callable;
 class Tab implements TabContract, JsonSerializable, Arrayable
 {
     /** @var string|Closure */
-    protected $title;
+    public $title;
+
+    public $uuid;
+
 
     /** @var Field[] */
     protected $fields;
@@ -36,8 +39,6 @@ class Tab implements TabContract, JsonSerializable, Arrayable
     protected $bodyClass = [];
 
     protected $position;
-
-    public $uuid;
 
     public function __construct($title, array $fields, $position = 0)
     {
