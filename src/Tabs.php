@@ -61,7 +61,6 @@ class Tabs extends Panel
     {
         $this->name = $name;
         $this->preservedName = $name;
-        $this->tabs = $fields;
         $this->withComponent('tabs');
 
         parent::__construct($name, $fields);
